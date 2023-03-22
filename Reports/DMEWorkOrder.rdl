@@ -2304,7 +2304,6 @@ Fields!ShipmentDate_SalesHeader.Value)</Hidden>
                       <Value>=ReportItems!TotalCaption.Value</Value>
                       <Style>
                         <FontFamily>Segoe UI</FontFamily>
-                        <FontSize>8pt</FontSize>
                         <FontWeight>Bold</FontWeight>
                       </Style>
                     </TextRun>
@@ -2372,6 +2371,7 @@ Fields!ShipmentDate_SalesHeader.Value)</Hidden>
                       <Value EvaluationMode="Constant">Customer Signature:</Value>
                       <Style>
                         <FontFamily>Segoe UI</FontFamily>
+                        <FontSize>9pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>
