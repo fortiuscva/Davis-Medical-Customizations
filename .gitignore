@@ -1,7 +1,6 @@
 *.app
 .alcache/*.*
 .vscode/.alcache/*.*
-.vscode/launch.json
 .vscode/.alstudio/alstudio.scopes.json
 entitlements.json
 extensionsPermissionSet.xml
