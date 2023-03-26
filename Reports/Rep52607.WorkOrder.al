@@ -162,6 +162,10 @@ report 52607 "DME Work Order"
                 }
                 column(Work_OrderCaption; Work_OrderCaptionLbl)
                 { }
+                column(CustomerNoCaption; CustomerNoCaptionLbl)
+                { }
+                column(CustomerNo; "Sales Header"."Sell-to Customer No.")
+                { }
                 dataitem("Sales Line"; "Sales Line")
                 {
                     DataItemLink = "Document Type" = FIELD("Document Type"), "Document No." = FIELD("No.");
@@ -329,5 +333,6 @@ report 52607 "DME Work Order"
         Amount_CaptionLbl: Label 'Amount';
         Total_CaptionLbl: Label 'Total';
         GrandTotal: Decimal;
+        CustomerNoCaptionLbl: Label 'Customer No.';
 }
 

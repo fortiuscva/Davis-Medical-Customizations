@@ -11,274 +11,6 @@
       <rd:DataSourceID>bf5c0891-a645-4dd1-9b08-bd5133fcffab</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="No1_SalesHeader">
-          <DataField>No1_SalesHeader</DataField>
-        </Field>
-        <Field Name="ShipmentDate_SalesHeader">
-          <DataField>ShipmentDate_SalesHeader</DataField>
-        </Field>
-        <Field Name="CompanyName">
-          <DataField>CompanyName</DataField>
-        </Field>
-        <Field Name="CompanyInformation_Picture">
-          <DataField>CompanyInformation_Picture</DataField>
-        </Field>
-        <Field Name="CompanyAddress1">
-          <DataField>CompanyAddress1</DataField>
-        </Field>
-        <Field Name="CompanyAddress2">
-          <DataField>CompanyAddress2</DataField>
-        </Field>
-        <Field Name="CompanyAddress3">
-          <DataField>CompanyAddress3</DataField>
-        </Field>
-        <Field Name="CompanyAddress4">
-          <DataField>CompanyAddress4</DataField>
-        </Field>
-        <Field Name="CompanyAddress5">
-          <DataField>CompanyAddress5</DataField>
-        </Field>
-        <Field Name="CompanyAddress6">
-          <DataField>CompanyAddress6</DataField>
-        </Field>
-        <Field Name="CompanyAddress7">
-          <DataField>CompanyAddress7</DataField>
-        </Field>
-        <Field Name="CustAddr1">
-          <DataField>CustAddr1</DataField>
-        </Field>
-        <Field Name="CustAddr2">
-          <DataField>CustAddr2</DataField>
-        </Field>
-        <Field Name="CustAddr3">
-          <DataField>CustAddr3</DataField>
-        </Field>
-        <Field Name="CustAddr4">
-          <DataField>CustAddr4</DataField>
-        </Field>
-        <Field Name="CustAddr5">
-          <DataField>CustAddr5</DataField>
-        </Field>
-        <Field Name="CustAddr6">
-          <DataField>CustAddr6</DataField>
-        </Field>
-        <Field Name="CustAddr7">
-          <DataField>CustAddr7</DataField>
-        </Field>
-        <Field Name="CustAddr8">
-          <DataField>CustAddr8</DataField>
-        </Field>
-        <Field Name="BillToAddress1">
-          <DataField>BillToAddress1</DataField>
-        </Field>
-        <Field Name="BillToAddress2">
-          <DataField>BillToAddress2</DataField>
-        </Field>
-        <Field Name="BillToAddress3">
-          <DataField>BillToAddress3</DataField>
-        </Field>
-        <Field Name="BillToAddress4">
-          <DataField>BillToAddress4</DataField>
-        </Field>
-        <Field Name="BillToAddress5">
-          <DataField>BillToAddress5</DataField>
-        </Field>
-        <Field Name="BillToAddress6">
-          <DataField>BillToAddress6</DataField>
-        </Field>
-        <Field Name="BillToAddress7">
-          <DataField>BillToAddress7</DataField>
-        </Field>
-        <Field Name="ShipToAddress1">
-          <DataField>ShipToAddress1</DataField>
-        </Field>
-        <Field Name="ShipToAddress2">
-          <DataField>ShipToAddress2</DataField>
-        </Field>
-        <Field Name="ShipToAddress3">
-          <DataField>ShipToAddress3</DataField>
-        </Field>
-        <Field Name="ShipToAddress4">
-          <DataField>ShipToAddress4</DataField>
-        </Field>
-        <Field Name="ShipToAddress5">
-          <DataField>ShipToAddress5</DataField>
-        </Field>
-        <Field Name="ShipToAddress6">
-          <DataField>ShipToAddress6</DataField>
-        </Field>
-        <Field Name="ShipToAddress7">
-          <DataField>ShipToAddress7</DataField>
-        </Field>
-        <Field Name="ShipmentDateCaption">
-          <DataField>ShipmentDateCaption</DataField>
-        </Field>
-        <Field Name="SalesOrderNoCaption">
-          <DataField>SalesOrderNoCaption</DataField>
-        </Field>
-        <Field Name="PageNoCaption">
-          <DataField>PageNoCaption</DataField>
-        </Field>
-        <Field Name="WorkOrderCaption">
-          <DataField>WorkOrderCaption</DataField>
-        </Field>
-        <Field Name="DMESell_to_Contact">
-          <DataField>DMESell_to_Contact</DataField>
-        </Field>
-        <Field Name="Order_Date">
-          <DataField>Order_Date</DataField>
-        </Field>
-        <Field Name="WorkOrderNo">
-          <DataField>WorkOrderNo</DataField>
-        </Field>
-        <Field Name="BillTo_Caption">
-          <DataField>BillTo_Caption</DataField>
-        </Field>
-        <Field Name="ShipTo_Caption">
-          <DataField>ShipTo_Caption</DataField>
-        </Field>
-        <Field Name="CustContactCaption">
-          <DataField>CustContactCaption</DataField>
-        </Field>
-        <Field Name="PoNoCaption">
-          <DataField>PoNoCaption</DataField>
-        </Field>
-        <Field Name="PONo">
-          <DataField>PONo</DataField>
-        </Field>
-        <Field Name="TermsCaption">
-          <DataField>TermsCaption</DataField>
-        </Field>
-        <Field Name="PaymentTermsDesc">
-          <DataField>PaymentTermsDesc</DataField>
-        </Field>
-        <Field Name="ServiceType_Caption">
-          <DataField>ServiceType_Caption</DataField>
-        </Field>
-        <Field Name="ServiceType">
-          <DataField>ServiceType</DataField>
-        </Field>
-        <Field Name="ServiceAdvisor_Caption">
-          <DataField>ServiceAdvisor_Caption</DataField>
-        </Field>
-        <Field Name="ServiceAdvisor">
-          <DataField>ServiceAdvisor</DataField>
-        </Field>
-        <Field Name="ServiceDate_Caption">
-          <DataField>ServiceDate_Caption</DataField>
-        </Field>
-        <Field Name="ServiceDate">
-          <DataField>ServiceDate</DataField>
-        </Field>
-        <Field Name="DateCaption">
-          <DataField>DateCaption</DataField>
-        </Field>
-        <Field Name="Work_OrderCaption">
-          <DataField>Work_OrderCaption</DataField>
-        </Field>
-        <Field Name="No_SalesLine">
-          <DataField>No_SalesLine</DataField>
-        </Field>
-        <Field Name="Description_SalesLine">
-          <DataField>Description_SalesLine</DataField>
-        </Field>
-        <Field Name="Quantity_SalesLine">
-          <DataField>Quantity_SalesLine</DataField>
-        </Field>
-        <Field Name="Quantity_SalesLineFormat">
-          <DataField>Quantity_SalesLineFormat</DataField>
-        </Field>
-        <Field Name="UnitofMeasure_SalesLine">
-          <DataField>UnitofMeasure_SalesLine</DataField>
-        </Field>
-        <Field Name="Type_SalesLine">
-          <DataField>Type_SalesLine</DataField>
-        </Field>
-        <Field Name="QtyworkPostSalesOrderCptn">
-          <DataField>QtyworkPostSalesOrderCptn</DataField>
-        </Field>
-        <Field Name="QuantityUsedCaption">
-          <DataField>QuantityUsedCaption</DataField>
-        </Field>
-        <Field Name="UnitofMeasureCaption">
-          <DataField>UnitofMeasureCaption</DataField>
-        </Field>
-        <Field Name="SL_Unit_Price">
-          <DataField>SL_Unit_Price</DataField>
-        </Field>
-        <Field Name="SL_Unit_PriceFormat">
-          <DataField>SL_Unit_PriceFormat</DataField>
-        </Field>
-        <Field Name="SL_AMount">
-          <DataField>SL_AMount</DataField>
-        </Field>
-        <Field Name="SL_AMountFormat">
-          <DataField>SL_AMountFormat</DataField>
-        </Field>
-        <Field Name="Item_Caption">
-          <DataField>Item_Caption</DataField>
-        </Field>
-        <Field Name="Ordered_Caption">
-          <DataField>Ordered_Caption</DataField>
-        </Field>
-        <Field Name="Rate_Caption">
-          <DataField>Rate_Caption</DataField>
-        </Field>
-        <Field Name="Amount_Caption">
-          <DataField>Amount_Caption</DataField>
-        </Field>
-        <Field Name="Total_Caption">
-          <DataField>Total_Caption</DataField>
-        </Field>
-        <Field Name="GrandTotal">
-          <DataField>GrandTotal</DataField>
-        </Field>
-        <Field Name="GrandTotalFormat">
-          <DataField>GrandTotalFormat</DataField>
-        </Field>
-        <Field Name="Date_SalesCommentLine">
-          <DataField>Date_SalesCommentLine</DataField>
-        </Field>
-        <Field Name="Code_SalesCommentLine">
-          <DataField>Code_SalesCommentLine</DataField>
-        </Field>
-        <Field Name="Comment_SalesCommentLine">
-          <DataField>Comment_SalesCommentLine</DataField>
-        </Field>
-        <Field Name="CommentsCaption">
-          <DataField>CommentsCaption</DataField>
-        </Field>
-        <Field Name="SalesCommentLineDtCptn">
-          <DataField>SalesCommentLineDtCptn</DataField>
-        </Field>
-        <Field Name="NoCaption">
-          <DataField>NoCaption</DataField>
-        </Field>
-        <Field Name="DescriptionCaption">
-          <DataField>DescriptionCaption</DataField>
-        </Field>
-        <Field Name="QuantityCaption">
-          <DataField>QuantityCaption</DataField>
-        </Field>
-        <Field Name="UnitofMeasureCaptionControl33">
-          <DataField>UnitofMeasureCaptionControl33</DataField>
-        </Field>
-        <Field Name="workPostdItemorResJnlCptn">
-          <DataField>workPostdItemorResJnlCptn</DataField>
-        </Field>
-        <Field Name="TypeCaption">
-          <DataField>TypeCaption</DataField>
-        </Field>
-      </Fields>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -1054,7 +786,9 @@ Fields!ServiceAdvisor.Value + Chr(177) +
 Fields!ServiceDate_Caption.Value + Chr(177) +
 Fields!ServiceDate.Value + Chr(177) +
 Fields!Work_OrderCaption.Value + Chr(177) +
-Fields!ShipmentDate_SalesHeader.Value)</Hidden>
+Fields!ShipmentDate_SalesHeader.Value + Chr(177) + 
+Fields!CustomerNoCaption.Value + Chr(177) + 
+Fields!CustomerNo.Value)</Hidden>
                               </Visibility>
                               <Style>
                                 <Border>
@@ -2286,6 +2020,77 @@ Fields!ShipmentDate_SalesHeader.Value)</Hidden>
                 <Border />
               </Style>
             </Image>
+            <Textbox Name="Textbox86">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=Code.GetData(51)</Value>
+                      <Style>
+                        <FontFamily>Segoe UI</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>Bold</FontWeight>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox67</rd:DefaultName>
+              <Top>2.77756cm</Top>
+              <Left>11.40563cm</Left>
+              <Height>0.6cm</Height>
+              <Width>6.38979cm</Width>
+              <ZIndex>25</ZIndex>
+              <Style>
+                <Border>
+                  <Style>Solid</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="Textbox87">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=Code.GetData(52)</Value>
+                      <Style>
+                        <FontFamily>Segoe UI</FontFamily>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox67</rd:DefaultName>
+              <Top>3.41256cm</Top>
+              <Left>11.40525cm</Left>
+              <Height>0.6cm</Height>
+              <Width>6.39017cm</Width>
+              <ZIndex>26</ZIndex>
+              <Style>
+                <Border>
+                  <Style>Solid</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
           </ReportItems>
           <Style />
         </PageHeader>
@@ -2584,4 +2389,278 @@ End Function</Code>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
   <rd:ReportID>eb15719a-2694-49bd-809c-95ce0143f052</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="No1_SalesHeader">
+          <DataField>No1_SalesHeader</DataField>
+        </Field>
+        <Field Name="ShipmentDate_SalesHeader">
+          <DataField>ShipmentDate_SalesHeader</DataField>
+        </Field>
+        <Field Name="CompanyName">
+          <DataField>CompanyName</DataField>
+        </Field>
+        <Field Name="CompanyInformation_Picture">
+          <DataField>CompanyInformation_Picture</DataField>
+        </Field>
+        <Field Name="CompanyAddress1">
+          <DataField>CompanyAddress1</DataField>
+        </Field>
+        <Field Name="CompanyAddress2">
+          <DataField>CompanyAddress2</DataField>
+        </Field>
+        <Field Name="CompanyAddress3">
+          <DataField>CompanyAddress3</DataField>
+        </Field>
+        <Field Name="CompanyAddress4">
+          <DataField>CompanyAddress4</DataField>
+        </Field>
+        <Field Name="CompanyAddress5">
+          <DataField>CompanyAddress5</DataField>
+        </Field>
+        <Field Name="CompanyAddress6">
+          <DataField>CompanyAddress6</DataField>
+        </Field>
+        <Field Name="CompanyAddress7">
+          <DataField>CompanyAddress7</DataField>
+        </Field>
+        <Field Name="CustAddr1">
+          <DataField>CustAddr1</DataField>
+        </Field>
+        <Field Name="CustAddr2">
+          <DataField>CustAddr2</DataField>
+        </Field>
+        <Field Name="CustAddr3">
+          <DataField>CustAddr3</DataField>
+        </Field>
+        <Field Name="CustAddr4">
+          <DataField>CustAddr4</DataField>
+        </Field>
+        <Field Name="CustAddr5">
+          <DataField>CustAddr5</DataField>
+        </Field>
+        <Field Name="CustAddr6">
+          <DataField>CustAddr6</DataField>
+        </Field>
+        <Field Name="CustAddr7">
+          <DataField>CustAddr7</DataField>
+        </Field>
+        <Field Name="CustAddr8">
+          <DataField>CustAddr8</DataField>
+        </Field>
+        <Field Name="BillToAddress1">
+          <DataField>BillToAddress1</DataField>
+        </Field>
+        <Field Name="BillToAddress2">
+          <DataField>BillToAddress2</DataField>
+        </Field>
+        <Field Name="BillToAddress3">
+          <DataField>BillToAddress3</DataField>
+        </Field>
+        <Field Name="BillToAddress4">
+          <DataField>BillToAddress4</DataField>
+        </Field>
+        <Field Name="BillToAddress5">
+          <DataField>BillToAddress5</DataField>
+        </Field>
+        <Field Name="BillToAddress6">
+          <DataField>BillToAddress6</DataField>
+        </Field>
+        <Field Name="BillToAddress7">
+          <DataField>BillToAddress7</DataField>
+        </Field>
+        <Field Name="ShipToAddress1">
+          <DataField>ShipToAddress1</DataField>
+        </Field>
+        <Field Name="ShipToAddress2">
+          <DataField>ShipToAddress2</DataField>
+        </Field>
+        <Field Name="ShipToAddress3">
+          <DataField>ShipToAddress3</DataField>
+        </Field>
+        <Field Name="ShipToAddress4">
+          <DataField>ShipToAddress4</DataField>
+        </Field>
+        <Field Name="ShipToAddress5">
+          <DataField>ShipToAddress5</DataField>
+        </Field>
+        <Field Name="ShipToAddress6">
+          <DataField>ShipToAddress6</DataField>
+        </Field>
+        <Field Name="ShipToAddress7">
+          <DataField>ShipToAddress7</DataField>
+        </Field>
+        <Field Name="ShipmentDateCaption">
+          <DataField>ShipmentDateCaption</DataField>
+        </Field>
+        <Field Name="SalesOrderNoCaption">
+          <DataField>SalesOrderNoCaption</DataField>
+        </Field>
+        <Field Name="PageNoCaption">
+          <DataField>PageNoCaption</DataField>
+        </Field>
+        <Field Name="WorkOrderCaption">
+          <DataField>WorkOrderCaption</DataField>
+        </Field>
+        <Field Name="DMESell_to_Contact">
+          <DataField>DMESell_to_Contact</DataField>
+        </Field>
+        <Field Name="Order_Date">
+          <DataField>Order_Date</DataField>
+        </Field>
+        <Field Name="WorkOrderNo">
+          <DataField>WorkOrderNo</DataField>
+        </Field>
+        <Field Name="BillTo_Caption">
+          <DataField>BillTo_Caption</DataField>
+        </Field>
+        <Field Name="ShipTo_Caption">
+          <DataField>ShipTo_Caption</DataField>
+        </Field>
+        <Field Name="CustContactCaption">
+          <DataField>CustContactCaption</DataField>
+        </Field>
+        <Field Name="PoNoCaption">
+          <DataField>PoNoCaption</DataField>
+        </Field>
+        <Field Name="PONo">
+          <DataField>PONo</DataField>
+        </Field>
+        <Field Name="TermsCaption">
+          <DataField>TermsCaption</DataField>
+        </Field>
+        <Field Name="PaymentTermsDesc">
+          <DataField>PaymentTermsDesc</DataField>
+        </Field>
+        <Field Name="ServiceType_Caption">
+          <DataField>ServiceType_Caption</DataField>
+        </Field>
+        <Field Name="ServiceType">
+          <DataField>ServiceType</DataField>
+        </Field>
+        <Field Name="ServiceAdvisor_Caption">
+          <DataField>ServiceAdvisor_Caption</DataField>
+        </Field>
+        <Field Name="ServiceAdvisor">
+          <DataField>ServiceAdvisor</DataField>
+        </Field>
+        <Field Name="ServiceDate_Caption">
+          <DataField>ServiceDate_Caption</DataField>
+        </Field>
+        <Field Name="ServiceDate">
+          <DataField>ServiceDate</DataField>
+        </Field>
+        <Field Name="DateCaption">
+          <DataField>DateCaption</DataField>
+        </Field>
+        <Field Name="Work_OrderCaption">
+          <DataField>Work_OrderCaption</DataField>
+        </Field>
+        <Field Name="CustomerNoCaption">
+          <DataField>CustomerNoCaption</DataField>
+        </Field>
+        <Field Name="CustomerNo">
+          <DataField>CustomerNo</DataField>
+        </Field>
+        <Field Name="No_SalesLine">
+          <DataField>No_SalesLine</DataField>
+        </Field>
+        <Field Name="Description_SalesLine">
+          <DataField>Description_SalesLine</DataField>
+        </Field>
+        <Field Name="Quantity_SalesLine">
+          <DataField>Quantity_SalesLine</DataField>
+        </Field>
+        <Field Name="Quantity_SalesLineFormat">
+          <DataField>Quantity_SalesLineFormat</DataField>
+        </Field>
+        <Field Name="UnitofMeasure_SalesLine">
+          <DataField>UnitofMeasure_SalesLine</DataField>
+        </Field>
+        <Field Name="Type_SalesLine">
+          <DataField>Type_SalesLine</DataField>
+        </Field>
+        <Field Name="QtyworkPostSalesOrderCptn">
+          <DataField>QtyworkPostSalesOrderCptn</DataField>
+        </Field>
+        <Field Name="QuantityUsedCaption">
+          <DataField>QuantityUsedCaption</DataField>
+        </Field>
+        <Field Name="UnitofMeasureCaption">
+          <DataField>UnitofMeasureCaption</DataField>
+        </Field>
+        <Field Name="SL_Unit_Price">
+          <DataField>SL_Unit_Price</DataField>
+        </Field>
+        <Field Name="SL_Unit_PriceFormat">
+          <DataField>SL_Unit_PriceFormat</DataField>
+        </Field>
+        <Field Name="SL_AMount">
+          <DataField>SL_AMount</DataField>
+        </Field>
+        <Field Name="SL_AMountFormat">
+          <DataField>SL_AMountFormat</DataField>
+        </Field>
+        <Field Name="Item_Caption">
+          <DataField>Item_Caption</DataField>
+        </Field>
+        <Field Name="Ordered_Caption">
+          <DataField>Ordered_Caption</DataField>
+        </Field>
+        <Field Name="Rate_Caption">
+          <DataField>Rate_Caption</DataField>
+        </Field>
+        <Field Name="Amount_Caption">
+          <DataField>Amount_Caption</DataField>
+        </Field>
+        <Field Name="Total_Caption">
+          <DataField>Total_Caption</DataField>
+        </Field>
+        <Field Name="GrandTotal">
+          <DataField>GrandTotal</DataField>
+        </Field>
+        <Field Name="GrandTotalFormat">
+          <DataField>GrandTotalFormat</DataField>
+        </Field>
+        <Field Name="Date_SalesCommentLine">
+          <DataField>Date_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="Code_SalesCommentLine">
+          <DataField>Code_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="Comment_SalesCommentLine">
+          <DataField>Comment_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="CommentsCaption">
+          <DataField>CommentsCaption</DataField>
+        </Field>
+        <Field Name="SalesCommentLineDtCptn">
+          <DataField>SalesCommentLineDtCptn</DataField>
+        </Field>
+        <Field Name="NoCaption">
+          <DataField>NoCaption</DataField>
+        </Field>
+        <Field Name="DescriptionCaption">
+          <DataField>DescriptionCaption</DataField>
+        </Field>
+        <Field Name="QuantityCaption">
+          <DataField>QuantityCaption</DataField>
+        </Field>
+        <Field Name="UnitofMeasureCaptionControl33">
+          <DataField>UnitofMeasureCaptionControl33</DataField>
+        </Field>
+        <Field Name="workPostdItemorResJnlCptn">
+          <DataField>workPostdItemorResJnlCptn</DataField>
+        </Field>
+        <Field Name="TypeCaption">
+          <DataField>TypeCaption</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>
