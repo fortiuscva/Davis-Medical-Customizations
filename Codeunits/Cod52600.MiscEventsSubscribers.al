@@ -10,4 +10,11 @@ codeunit 52600 "DME Misc. Events & Subscribers"
             end;
         end;
     end;
+
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Inventory Profile Offsetting", 'OnMaintainPlanningLineOnBeforeReqLineInsert', '', false, false)]
+    local procedure Cod99000854_OnMaintainPlanningLineOnBeforeReqLineInsert(var RequisitionLine: Record "Requisition Line"; var SupplyInvtProfile: Record "Inventory Profile"; PlanToDate: Date; CurrentForecast: Code[10]; NewPhase: Option; Direction: Option; DemandInvtProfile: Record "Inventory Profile"; ExcludeForecastBefore: Date);
+    begin
+        RequisitionLine."Accept Action Message" := false;
+    end;
+
 }
