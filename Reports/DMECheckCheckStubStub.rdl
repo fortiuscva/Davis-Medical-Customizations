@@ -1470,9 +1470,6 @@
               <Height>0.16654in</Height>
               <Width>1.97374in</Width>
               <ZIndex>4</ZIndex>
-              <Visibility>
-                <Hidden>true</Hidden>
-              </Visibility>
               <DataElementOutput>NoOutput</DataElementOutput>
               <Style>
                 <Border>
