@@ -21,8 +21,8 @@ report 52606 "DME Check (Check/Stub/Stub)"
 
             trigger OnPreDataItem()
             begin
-                if CurrReport.Preview then
-                    Error(Text000Err);
+                //if CurrReport.Preview then
+                //Error(Text000Err);
 
                 if UseCheckNo = '' then
                     Error(Text001Err);
