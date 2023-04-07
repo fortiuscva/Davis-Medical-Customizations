@@ -283,6 +283,11 @@ report 52607 "DME Work Order"
                 FormatAddr.SalesHeaderShipTo(ShipToAddress, ShipToAddress, "Sales Header");
                 FormatAddr.Company(CompanyAddress, CompanyInformation);
                 FormatDocument.SetPaymentTerms(PaymentTerms, "Payment Terms Code", "Language Code");
+
+                ServiceAdvisor := "Sales Header"."Assigned User ID";
+                ServiceDate := "Sales Header"."Requested Delivery Date";
+                PONo := "Sales Header"."External Document No.";
+                WorkOrderNo := "Sales Header"."No.";
             end;
         }
     }
@@ -322,7 +327,7 @@ report 52607 "DME Work Order"
         ShipTo_CaptionLbl: Label 'SHIP TO:';
         PaymentTerms: Record "Payment Terms";
         WorkOrderNo: Code[20];
-        PONo: Code[20];
+        PONo: Code[35];
         ServiceType: Text;
         ServiceAdvisor: Text;
         ServiceDate: Date;
