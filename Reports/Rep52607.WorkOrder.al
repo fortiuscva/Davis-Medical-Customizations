@@ -166,6 +166,10 @@ report 52607 "DME Work Order"
                 { }
                 column(CustomerNo; "Sales Header"."Sell-to Customer No.")
                 { }
+                column(ShippingTimeCaptionLbl; ShippingTimeCaptionLbl)
+                { }
+                column(ShippingTime; "Sales Header"."Shipping Time")
+                { }
                 dataitem("Sales Line"; "Sales Line")
                 {
                     DataItemLink = "Document Type" = FIELD("Document Type"), "Document No." = FIELD("No.");
@@ -339,5 +343,6 @@ report 52607 "DME Work Order"
         Total_CaptionLbl: Label 'Total';
         GrandTotal: Decimal;
         CustomerNoCaptionLbl: Label 'Customer No.';
+        ShippingTimeCaptionLbl: Label 'Shipping Time';
 }
 

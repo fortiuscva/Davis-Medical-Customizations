@@ -24,7 +24,7 @@
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
-                  <Height>1.73176cm</Height>
+                  <Height>2.33176cm</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -467,6 +467,106 @@
                                     </TablixCells>
                                   </TablixRow>
                                   <TablixRow>
+                                    <Height>0.55001cm</Height>
+                                    <TablixCells>
+                                      <TablixCell>
+                                        <CellContents>
+                                          <Textbox Name="Textbox5">
+                                            <CanGrow>true</CanGrow>
+                                            <KeepTogether>true</KeepTogether>
+                                            <Paragraphs>
+                                              <Paragraph>
+                                                <TextRuns>
+                                                  <TextRun>
+                                                    <Value />
+                                                    <Style>
+                                                      <FontFamily>Segoe UI</FontFamily>
+                                                      <FontSize>8pt</FontSize>
+                                                    </Style>
+                                                  </TextRun>
+                                                </TextRuns>
+                                                <Style />
+                                              </Paragraph>
+                                            </Paragraphs>
+                                            <rd:DefaultName>Textbox5</rd:DefaultName>
+                                            <Style>
+                                              <Border />
+                                              <PaddingLeft>2pt</PaddingLeft>
+                                              <PaddingRight>2pt</PaddingRight>
+                                              <PaddingTop>2pt</PaddingTop>
+                                              <PaddingBottom>2pt</PaddingBottom>
+                                            </Style>
+                                          </Textbox>
+                                        </CellContents>
+                                      </TablixCell>
+                                      <TablixCell>
+                                        <CellContents>
+                                          <Textbox Name="textbox25">
+                                            <KeepTogether>true</KeepTogether>
+                                            <Paragraphs>
+                                              <Paragraph>
+                                                <TextRuns>
+                                                  <TextRun>
+                                                    <Value>=Fields!Description_SalesLine.Value</Value>
+                                                    <Style>
+                                                      <FontFamily>Segoe UI</FontFamily>
+                                                      <FontSize>8pt</FontSize>
+                                                    </Style>
+                                                  </TextRun>
+                                                </TextRuns>
+                                                <Style />
+                                              </Paragraph>
+                                            </Paragraphs>
+                                            <ZIndex>4</ZIndex>
+                                            <Style>
+                                              <Border />
+                                              <PaddingLeft>2pt</PaddingLeft>
+                                              <PaddingRight>2pt</PaddingRight>
+                                              <PaddingTop>2pt</PaddingTop>
+                                              <PaddingBottom>2pt</PaddingBottom>
+                                            </Style>
+                                          </Textbox>
+                                          <ColSpan>4</ColSpan>
+                                        </CellContents>
+                                      </TablixCell>
+                                      <TablixCell />
+                                      <TablixCell />
+                                      <TablixCell />
+                                      <TablixCell>
+                                        <CellContents>
+                                          <Textbox Name="Textbox12">
+                                            <CanGrow>true</CanGrow>
+                                            <KeepTogether>true</KeepTogether>
+                                            <Paragraphs>
+                                              <Paragraph>
+                                                <TextRuns>
+                                                  <TextRun>
+                                                    <Value />
+                                                    <Style>
+                                                      <FontFamily>Segoe UI</FontFamily>
+                                                      <FontSize>8pt</FontSize>
+                                                    </Style>
+                                                  </TextRun>
+                                                </TextRuns>
+                                                <Style>
+                                                  <TextAlign>Right</TextAlign>
+                                                </Style>
+                                              </Paragraph>
+                                            </Paragraphs>
+                                            <rd:DefaultName>Textbox12</rd:DefaultName>
+                                            <Style>
+                                              <Border />
+                                              <PaddingLeft>5pt</PaddingLeft>
+                                              <PaddingRight>5pt</PaddingRight>
+                                              <PaddingTop>2pt</PaddingTop>
+                                              <PaddingBottom>2pt</PaddingBottom>
+                                            </Style>
+                                          </Textbox>
+                                        </CellContents>
+                                      </TablixCell>
+                                    </TablixCells>
+                                  </TablixRow>
+                                  <TablixRow>
                                     <Height>0.2825cm</Height>
                                     <TablixCells>
                                       <TablixCell>
@@ -687,7 +787,16 @@
                                       <DataElementName>Detail</DataElementName>
                                     </Group>
                                     <TablixMembers>
-                                      <TablixMember />
+                                      <TablixMember>
+                                        <Visibility>
+                                          <Hidden>=IIF(Fields!No_SalesLine.Value &lt;&gt; "",FALSE,TRUE)</Hidden>
+                                        </Visibility>
+                                      </TablixMember>
+                                      <TablixMember>
+                                        <Visibility>
+                                          <Hidden>=IIF(Fields!No_SalesLine.Value = "",FALSE,TRUE)</Hidden>
+                                        </Visibility>
+                                      </TablixMember>
                                     </TablixMembers>
                                     <DataElementName>Detail_Collection</DataElementName>
                                     <DataElementOutput>Output</DataElementOutput>
@@ -699,17 +808,8 @@
                                 </TablixMembers>
                               </TablixRowHierarchy>
                               <DataSetName>DataSet_Result</DataSetName>
-                              <Filters>
-                                <Filter>
-                                  <FilterExpression>=Fields!No_SalesLine.Value</FilterExpression>
-                                  <Operator>GreaterThan</Operator>
-                                  <FilterValues>
-                                    <FilterValue />
-                                  </FilterValues>
-                                </Filter>
-                              </Filters>
                               <Top>0.37041cm</Top>
-                              <Height>1.36135cm</Height>
+                              <Height>1.91136cm</Height>
                               <Width>19.18704cm</Width>
                               <Visibility>
                                 <Hidden>=iif(Count(Fields!No_SalesLine.Value),FALSE,TRUE)</Hidden>
@@ -788,7 +888,9 @@ Fields!ServiceDate.Value + Chr(177) +
 Fields!Work_OrderCaption.Value + Chr(177) +
 Fields!ShipmentDate_SalesHeader.Value + Chr(177) + 
 Fields!CustomerNoCaption.Value + Chr(177) + 
-Fields!CustomerNo.Value)</Hidden>
+Fields!CustomerNo.Value + Chr(177) + 
+Fields!ShippingTimeCaptionLbl.Value + Chr(177) +
+Fields!ShippingTime.Value)</Hidden>
                               </Visibility>
                               <Style>
                                 <Border>
@@ -836,12 +938,12 @@ Fields!CustomerNo.Value)</Hidden>
               <BreakLocation>End</BreakLocation>
             </PageBreak>
             <Left>0.00347in</Left>
-            <Height>1.73176cm</Height>
+            <Height>2.33176cm</Height>
             <Width>19.18704cm</Width>
             <Style />
           </Tablix>
         </ReportItems>
-        <Height>1.73176cm</Height>
+        <Height>2.33176cm</Height>
         <Style />
       </Body>
       <Width>19.19585cm</Width>
@@ -1467,7 +1569,7 @@ Fields!CustomerNo.Value)</Hidden>
               <Top>8.57462cm</Top>
               <Left>3.18342cm</Left>
               <Height>0.6cm</Height>
-              <Width>3.19757cm</Width>
+              <Width>4.49932cm</Width>
               <ZIndex>8</ZIndex>
               <Style>
                 <Border>
@@ -1500,7 +1602,7 @@ Fields!CustomerNo.Value)</Hidden>
               </Paragraphs>
               <rd:DefaultName>Textbox67</rd:DefaultName>
               <Top>8.57462cm</Top>
-              <Left>6.38099cm</Left>
+              <Left>7.68274cm</Left>
               <Height>0.6cm</Height>
               <Width>3.2187cm</Width>
               <ZIndex>9</ZIndex>
@@ -1521,7 +1623,7 @@ Fields!CustomerNo.Value)</Hidden>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=Code.GetData(43)</Value>
+                      <Value>=Code.GetData(53)</Value>
                       <Style>
                         <FontFamily>Segoe UI</FontFamily>
                         <FontSize>8pt</FontSize>
@@ -1535,9 +1637,9 @@ Fields!CustomerNo.Value)</Hidden>
               </Paragraphs>
               <rd:DefaultName>Textbox67</rd:DefaultName>
               <Top>8.57462cm</Top>
-              <Left>9.59969cm</Left>
+              <Left>10.90144cm</Left>
               <Height>0.6cm</Height>
-              <Width>3.20637cm</Width>
+              <Width>2.6772cm</Width>
               <ZIndex>10</ZIndex>
               <Style>
                 <Border>
@@ -1570,7 +1672,7 @@ Fields!CustomerNo.Value)</Hidden>
               </Paragraphs>
               <rd:DefaultName>Textbox67</rd:DefaultName>
               <Top>8.57462cm</Top>
-              <Left>12.80606cm</Left>
+              <Left>13.56806cm</Left>
               <Height>0.6cm</Height>
               <Width>3.18342cm</Width>
               <ZIndex>11</ZIndex>
@@ -1605,9 +1707,9 @@ Fields!CustomerNo.Value)</Hidden>
               </Paragraphs>
               <rd:DefaultName>Textbox67</rd:DefaultName>
               <Top>8.57462cm</Top>
-              <Left>15.98948cm</Left>
+              <Left>16.75148cm</Left>
               <Height>0.6cm</Height>
-              <Width>3.20637cm</Width>
+              <Width>2.40581cm</Width>
               <ZIndex>12</ZIndex>
               <Style>
                 <Border>
@@ -1677,7 +1779,7 @@ Fields!CustomerNo.Value)</Hidden>
               <Top>9.17462cm</Top>
               <Left>3.18342cm</Left>
               <Height>0.6cm</Height>
-              <Width>3.19757cm</Width>
+              <Width>4.49932cm</Width>
               <ZIndex>14</ZIndex>
               <Style>
                 <Border>
@@ -1710,7 +1812,7 @@ Fields!CustomerNo.Value)</Hidden>
               </Paragraphs>
               <rd:DefaultName>Textbox67</rd:DefaultName>
               <Top>9.17462cm</Top>
-              <Left>6.38099cm</Left>
+              <Left>7.68274cm</Left>
               <Height>0.6cm</Height>
               <Width>3.2099cm</Width>
               <ZIndex>15</ZIndex>
@@ -1731,7 +1833,7 @@ Fields!CustomerNo.Value)</Hidden>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=Code.GetData(44)</Value>
+                      <Value>=Code.GetData(54)</Value>
                       <Style>
                         <FontFamily>Segoe UI</FontFamily>
                         <FontSize>8pt</FontSize>
@@ -1745,9 +1847,9 @@ Fields!CustomerNo.Value)</Hidden>
               </Paragraphs>
               <rd:DefaultName>Textbox67</rd:DefaultName>
               <Top>9.17462cm</Top>
-              <Left>9.59089cm</Left>
+              <Left>10.89264cm</Left>
               <Height>0.6cm</Height>
-              <Width>3.20637cm</Width>
+              <Width>2.686cm</Width>
               <ZIndex>16</ZIndex>
               <Style>
                 <Border>
@@ -1780,7 +1882,7 @@ Fields!CustomerNo.Value)</Hidden>
               </Paragraphs>
               <rd:DefaultName>Textbox67</rd:DefaultName>
               <Top>9.17462cm</Top>
-              <Left>12.80606cm</Left>
+              <Left>13.56806cm</Left>
               <Height>0.6cm</Height>
               <Width>3.17462cm</Width>
               <ZIndex>17</ZIndex>
@@ -1815,9 +1917,9 @@ Fields!CustomerNo.Value)</Hidden>
               </Paragraphs>
               <rd:DefaultName>Textbox67</rd:DefaultName>
               <Top>9.17462cm</Top>
-              <Left>15.98068cm</Left>
+              <Left>16.74268cm</Left>
               <Height>0.6cm</Height>
-              <Width>3.21517cm</Width>
+              <Width>2.41461cm</Width>
               <ZIndex>18</ZIndex>
               <Style>
                 <Border>
@@ -2562,6 +2664,12 @@ End Function</Code>
         </Field>
         <Field Name="CustomerNo">
           <DataField>CustomerNo</DataField>
+        </Field>
+        <Field Name="ShippingTimeCaptionLbl">
+          <DataField>ShippingTimeCaptionLbl</DataField>
+        </Field>
+        <Field Name="ShippingTime">
+          <DataField>ShippingTime</DataField>
         </Field>
         <Field Name="No_SalesLine">
           <DataField>No_SalesLine</DataField>
