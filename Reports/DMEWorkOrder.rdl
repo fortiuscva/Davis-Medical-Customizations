@@ -890,7 +890,8 @@ Fields!ShipmentDate_SalesHeader.Value + Chr(177) +
 Fields!CustomerNoCaption.Value + Chr(177) + 
 Fields!CustomerNo.Value + Chr(177) + 
 Fields!ShippingTimeCaptionLbl.Value + Chr(177) +
-Fields!ShippingTime.Value)</Hidden>
+Fields!ShippingTime.Value + Chr(177) +
+Last(Fields!SalesHeaderComments.Value))</Hidden>
                               </Visibility>
                               <Style>
                                 <Border>
@@ -2193,6 +2194,39 @@ Fields!ShippingTime.Value)</Hidden>
                 <PaddingBottom>2pt</PaddingBottom>
               </Style>
             </Textbox>
+            <Textbox Name="Textbox7">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=Code.GetData(55)</Value>
+                      <Style>
+                        <FontFamily>Segoe UI</FontFamily>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox7</rd:DefaultName>
+              <Top>1.57951cm</Top>
+              <Left>7.34243cm</Left>
+              <Height>2.43305cm</Height>
+              <Width>3.89561cm</Width>
+              <ZIndex>27</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
           </ReportItems>
           <Style />
         </PageHeader>
@@ -2670,6 +2704,9 @@ End Function</Code>
         </Field>
         <Field Name="ShippingTime">
           <DataField>ShippingTime</DataField>
+        </Field>
+        <Field Name="SalesHeaderComments">
+          <DataField>SalesHeaderComments</DataField>
         </Field>
         <Field Name="No_SalesLine">
           <DataField>No_SalesLine</DataField>

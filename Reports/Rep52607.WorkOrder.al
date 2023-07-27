@@ -170,6 +170,9 @@ report 52607 "DME Work Order"
                 { }
                 column(ShippingTime; "Sales Header"."Shipping Time")
                 { }
+                column(SalesHeaderComments; SalesHeaderComments)
+                { }
+
                 dataitem("Sales Line"; "Sales Line")
                 {
                     DataItemLink = "Document Type" = FIELD("Document Type"), "Document No." = FIELD("No.");
@@ -249,6 +252,14 @@ report 52607 "DME Work Order"
                     column(SalesCommentLineDtCptn; SalesCommentLineDtCptnLbl)
                     {
                     }
+
+                    trigger OnAfterGetRecord()
+                    begin
+                        if SalesHeaderComments <> '' then
+                            SalesHeaderComments += ' ' + Comment
+                        else
+                            SalesHeaderComments := Comment;
+                    end;
 
                 }
                 dataitem("Extra Lines"; "Integer")
@@ -344,5 +355,6 @@ report 52607 "DME Work Order"
         GrandTotal: Decimal;
         CustomerNoCaptionLbl: Label 'Customer No.';
         ShippingTimeCaptionLbl: Label 'Shipping Time';
+        SalesHeaderComments: Text;
 }
 
