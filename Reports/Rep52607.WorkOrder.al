@@ -172,7 +172,8 @@ report 52607 "DME Work Order"
                 { }
                 column(SalesHeaderComments; SalesHeaderComments)
                 { }
-
+                column(Handling_Instructions; DSHIPPackageOptionsRec."Handling Instructions")
+                { }
                 dataitem("Sales Line"; "Sales Line")
                 {
                     DataItemLink = "Document Type" = FIELD("Document Type"), "Document No." = FIELD("No.");
@@ -303,6 +304,10 @@ report 52607 "DME Work Order"
                 ServiceDate := "Sales Header"."Requested Delivery Date";
                 PONo := "Sales Header"."External Document No.";
                 WorkOrderNo := "Sales Header"."No.";
+
+                DSHIPPackageOptionsRec.SetRange("Entry Type", DSHIPPackageOptionsRec."Entry Type"::document);
+                DSHIPPackageOptionsRec.SetRange("Document No.", "Sales Header"."No.");
+                if DSHIPPackageOptionsRec.FindFirst() then;
             end;
         }
     }
@@ -354,7 +359,8 @@ report 52607 "DME Work Order"
         Total_CaptionLbl: Label 'Total';
         GrandTotal: Decimal;
         CustomerNoCaptionLbl: Label 'Customer No.';
-        ShippingTimeCaptionLbl: Label 'Shipping Time';
+        ShippingTimeCaptionLbl: Label 'Service Type';
         SalesHeaderComments: Text;
+        DSHIPPackageOptionsRec: Record "DSHIP Package Options";
 }
 

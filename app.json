@@ -28,7 +28,13 @@
       "name":  "_Exclude_APIV2_",
       "publisher":  "Microsoft",
       "version":  "17.4.0.0"
-    }    
+    },
+    {
+      "id": "9c55319d-f3b9-441b-9956-0a0a04decd4b",
+      "name": "Dynamic Ship: Integrated Shipping",
+      "publisher": "Insight Works",
+      "version": "2.7.8475.2"
+    }
   ],
   "screenshots": [],
   "platform": "1.0.0.0",
