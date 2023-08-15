@@ -2312,9 +2312,6 @@ Last(Fields!SalesHeaderComments.Value))</Hidden>
                     <Border>
                       <Style>None</Style>
                     </Border>
-                    <BottomBorder>
-                      <Style>Solid</Style>
-                    </BottomBorder>
                     <PaddingLeft>5pt</PaddingLeft>
                     <PaddingRight>2pt</PaddingRight>
                     <PaddingTop>2pt</PaddingTop>
@@ -2351,9 +2348,6 @@ Last(Fields!SalesHeaderComments.Value))</Hidden>
                     <Border>
                       <Style>None</Style>
                     </Border>
-                    <BottomBorder>
-                      <Style>Solid</Style>
-                    </BottomBorder>
                     <PaddingLeft>5pt</PaddingLeft>
                     <PaddingRight>2pt</PaddingRight>
                     <PaddingTop>2pt</PaddingTop>
