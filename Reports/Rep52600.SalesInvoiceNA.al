@@ -309,7 +309,7 @@ report 52600 "DME Sales Invoice NA"
                     { }
                     column(DMESOTypeCaption; SOTypeCaptionLbl)
                     { }
-                    column(DMESoType; SoType)
+                    column(DMESoType; PackageTrackingNo)
                     { }
                     column(DMESONumbCaption; SONumbCaptionLbl)
                     { }
@@ -317,7 +317,7 @@ report 52600 "DME Sales Invoice NA"
                     { }
                     column(DMEShipNumberCaption; ShipNumberCaptionLbl)
                     { }
-                    column(DMEShipmentNo; ShipmentNo)
+                    column(DMEShipmentNo; PostedShipmentNumber)
                     { }
                     column(DMECustPoNoCaption; CustPoNoCaptionLbl)
                     { }
@@ -361,7 +361,8 @@ report 52600 "DME Sales Invoice NA"
                     { }
                     column(CompanyInformation_HomePage; CompanyInformation."Home Page")
                     { }
-
+                    column(PrintPaidLogo; PrintPaidLogo)
+                    { }
                     dataitem(SalesInvLine; "Integer")
                     {
                         DataItemTableView = SORTING(Number);
@@ -637,6 +638,19 @@ report 52600 "DME Sales Invoice NA"
                                     UnitPriceToPrint := 0 // so it won't print
                                 else
                                     UnitPriceToPrint := Round(AmountExclInvDisc / Quantity, 0.00001);
+
+                                //Get Sales Shipment Info start
+                                if (TempSalesInvoiceLine.Type = TempSalesInvoiceLine.Type::Item) and (TempSalesInvoiceLine.Quantity <> 0) and (PostedShipmentNumber = '') then begin
+                                    Clear(TempSalesShptLine);
+                                    Clear(SalesShipHeadGRec);
+                                    TempSalesInvoiceLine.GetSalesShptLines(TempSalesShptLine);
+                                    if TempSalesShptLine.FindFirst() then
+                                        if SalesShipHeadGRec.Get(TempSalesShptLine."Document No.") then begin
+                                            PostedShipmentNumber := SalesShipHeadGRec."No.";
+                                            PackageTrackingNo := SalesShipHeadGRec."Package Tracking No.";
+                                        end;
+                                end;
+                                //Get Sales Shipment Info End
                             end;
 
                             CollectAsmInformation(TempSalesInvoiceLine);
@@ -688,6 +702,8 @@ report 52600 "DME Sales Invoice NA"
                         CopyTxt := Text000;
 
                     SequenceNo := 0;
+                    PostedShipmentNumber := '';
+                    PackageTrackingNo := '';
                 end;
 
                 trigger OnPreDataItem()
@@ -823,6 +839,22 @@ report 52600 "DME Sales Invoice NA"
                     end;
                 end;
                 CustPONo := "External Document No.";
+
+                //Print Background image Start
+                PrintPaidLogo := false;
+                CustLedgerEntryGRec.Reset();
+                CustLedgerEntryGRec.SetRange("Posting Date", "Sales Invoice Header"."Posting Date");
+                CustLedgerEntryGRec.SetRange("Document No.", "Sales Invoice Header"."No.");
+                CustLedgerEntryGRec.SetRange("Document Type", CustLedgerEntryGRec."Document Type"::Invoice);
+                if CustLedgerEntryGRec.FindFirst() then begin
+                    DetCustLedgEntryGRec.Reset();
+                    DetCustLedgEntryGRec.SetRange("Cust. Ledger Entry No.", CustLedgerEntryGRec."Entry No.");
+                    DetCustLedgEntryGRec.SetRange("Entry Type", DetCustLedgEntryGRec."Entry Type"::Application);
+                    DetCustLedgEntryGRec.SetRange("Document Type", DetCustLedgEntryGRec."Document Type"::Payment);
+                    if DetCustLedgEntryGRec.FindFirst() then
+                        PrintPaidLogo := true;
+                end;
+                //Print Background image End
             end;
         }
     }
@@ -1050,7 +1082,7 @@ report 52600 "DME Sales Invoice NA"
         CurrencyCaptionLbl: Label 'Currency: ';
         CustRefNumbCaptionLbl: Label 'CUSTOMER REF. NO.';
         ContactCaptionLbl: Label 'CONTACT';
-        SOTypeCaptionLbl: Label 'SO TYPE';
+        SOTypeCaptionLbl: Label 'TRACKING NUMBER';
         SONumbCaptionLbl: Label 'SO NUMBER';
         ShipNumberCaptionLbl: Label 'SHIPMENT NUMBER';
         CustPoNoCaptionLbl: Label 'CUSTOMER P.O. NO.';
@@ -1058,8 +1090,6 @@ report 52600 "DME Sales Invoice NA"
         Item_CaptionLbl: Label 'ITEM';
         UOm_CaptionLbl: Label 'UOM';
         Disc_CaptionLbl: Label 'DISC.';
-        SoType: Code[10];
-        ShipmentNo: Code[10];
         CustPONo: Code[35];
         SequenceNo: Integer;
         SpacePointerExt: Integer;
@@ -1086,8 +1116,14 @@ report 52600 "DME Sales Invoice NA"
         DescLineVarGbl: Boolean;
         WebSiteCaptionLbl: Label 'Website: ';
         PhoneNoCapLbl: Label 'Phone No: ';
-
-
+        TempSalesShptLine: Record "Sales Shipment Line" temporary;
+        PostedShipmentNumber: code[50];
+        PackageTrackingNo: Code[50];
+        CustLedgerEntryGRec: Record "Cust. Ledger Entry";
+        [InDataSet]
+        PrintPaidLogo: Boolean;
+        DetCustLedgEntryGRec: Record "Detailed Cust. Ledg. Entry";
+        SalesShipHeadGRec: Record "Sales Shipment Header";
 
     procedure InitLogInteraction()
     begin

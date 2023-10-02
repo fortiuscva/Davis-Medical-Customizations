@@ -2606,11 +2606,14 @@ Cstr(Fields!SalesPurchPersonName.Value),Fields!No_SalesInvHeader.Value)</Hidden>
                   <Style />
                 </Paragraph>
               </Paragraphs>
-              <Top>1.23829in</Top>
+              <Top>1.42579in</Top>
               <Left>4.47429in</Left>
               <Height>11pt</Height>
               <Width>1.16473in</Width>
               <ZIndex>24</ZIndex>
+              <Visibility>
+                <Hidden>true</Hidden>
+              </Visibility>
               <Style />
             </Textbox>
             <Textbox Name="SalesInvoiceHeaderBilltoCustomerNo2">
@@ -2632,11 +2635,14 @@ Cstr(Fields!SalesPurchPersonName.Value),Fields!No_SalesInvHeader.Value)</Hidden>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>1.23829in</Top>
+              <Top>1.42579in</Top>
               <Left>5.63902in</Left>
               <Height>11pt</Height>
               <Width>1.4264in</Width>
               <ZIndex>25</ZIndex>
+              <Visibility>
+                <Hidden>true</Hidden>
+              </Visibility>
               <Style />
             </Textbox>
             <Rectangle Name="Rectangle1">
@@ -3572,7 +3578,7 @@ Cstr(Fields!SalesPurchPersonName.Value),Fields!No_SalesInvHeader.Value)</Hidden>
                   <Style />
                 </Paragraph>
               </Paragraphs>
-              <Top>1.40773in</Top>
+              <Top>1.25773in</Top>
               <Left>4.47429in</Left>
               <Height>11pt</Height>
               <Width>1.16473in</Width>
@@ -3598,7 +3604,7 @@ Cstr(Fields!SalesPurchPersonName.Value),Fields!No_SalesInvHeader.Value)</Hidden>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>1.40773in</Top>
+              <Top>1.25773in</Top>
               <Left>5.63902in</Left>
               <Height>11pt</Height>
               <Width>1.4264in</Width>
@@ -3609,8 +3615,7 @@ Cstr(Fields!SalesPurchPersonName.Value),Fields!No_SalesInvHeader.Value)</Hidden>
           <Style />
         </PageHeader>
         <PageFooter>
-          <Height>3.19096cm</Height>
-          <PrintOnFirstPage>true</PrintOnFirstPage>
+          <Height>3.39439cm</Height>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
             <Textbox Name="PageCaption1">
@@ -3632,8 +3637,8 @@ Cstr(Fields!SalesPurchPersonName.Value),Fields!No_SalesInvHeader.Value)</Hidden>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>1.01275in</Top>
-              <Left>5.3972in</Left>
+              <Top>1.02525in</Top>
+              <Left>5.44083in</Left>
               <Height>11pt</Height>
               <Width>1.67447in</Width>
               <Style />
@@ -4353,11 +4358,33 @@ Cstr(Fields!SalesPurchPersonName.Value),Fields!No_SalesInvHeader.Value)</Hidden>
                     <PaddingRight>2pt</PaddingRight>
                   </Style>
                 </Textbox>
+                <Rectangle Name="PaidLogoImageRect">
+                  <KeepTogether>true</KeepTogether>
+                  <Top>0.21237cm</Top>
+                  <Left>6.77024cm</Left>
+                  <Height>1.60335cm</Height>
+                  <Width>3.401cm</Width>
+                  <ZIndex>22</ZIndex>
+                  <Visibility>
+                    <Hidden>=NOT(Code.EndDocument())</Hidden>
+                  </Visibility>
+                  <Style>
+                    <Border>
+                      <Style>None</Style>
+                    </Border>
+                    <BackgroundImage>
+                      <Source>Embedded</Source>
+                      <Value>=IIF(Fields!PrintPaidLogo.Value = True, "PaidImage", false)</Value>
+                      <MIMEType>image/jpeg</MIMEType>
+                      <BackgroundRepeat>Clip</BackgroundRepeat>
+                    </BackgroundImage>
+                  </Style>
+                </Rectangle>
               </ReportItems>
               <KeepTogether>true</KeepTogether>
               <Top>0.10583cm</Top>
               <Left>0.2032cm</Left>
-              <Height>2.29016cm</Height>
+              <Height>2.29372cm</Height>
               <Width>17.86613cm</Width>
               <ZIndex>1</ZIndex>
               <Visibility>
@@ -4466,6 +4493,19 @@ End Function
 Public Function EndDocument() as Boolean
     Return Me.Report.Globals!PageNumber = Me.Report.Globals!TotalPages
 End Function</Code>
+  <EmbeddedImages>
+    <EmbeddedImage Name="PaidImage">
+      <MIMEType>image/jpeg</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
   <Language>=User!Language</Language>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
@@ -4754,6 +4794,9 @@ End Function</Code>
         </Field>
         <Field Name="CompanyInformation_HomePage">
           <DataField>CompanyInformation_HomePage</DataField>
+        </Field>
+        <Field Name="PrintPaidLogo">
+          <DataField>PrintPaidLogo</DataField>
         </Field>
         <Field Name="AmountExclInvDisc">
           <DataField>AmountExclInvDisc</DataField>
