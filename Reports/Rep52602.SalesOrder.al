@@ -837,7 +837,7 @@ report 52602 "DME Sales-Order"
         begin
             SalesSetup.Get();
             ArchiveDocument := SalesSetup."Archive Orders";
-            LogInteraction := SegManagement.FindInteractTmplCode(3) <> '';
+            LogInteraction := SegManagement.FindInteractionTemplateCode("Interaction Log Entry Document Type"::"Sales Ord. Cnfrmn.") <> '';
 
             ArchiveDocumentEnable := ArchiveDocument;
             LogInteractionEnable := LogInteraction;

@@ -686,7 +686,7 @@ report 52603 "DME Purchase-Order"
         trigger OnOpenPage()
         begin
             ArchiveDocument := ArchiveManagement.PurchaseDocArchiveGranule();
-            LogInteraction := SegManagement.FindInteractTmplCode(13) <> '';
+            LogInteraction := SegManagement.FindInteractionTemplateCode("Interaction Log Entry Document Type"::"Purch. Ord.") <> '';
 
             ArchiveDocumentEnable := ArchiveDocument;
             LogInteractionEnable := LogInteraction;

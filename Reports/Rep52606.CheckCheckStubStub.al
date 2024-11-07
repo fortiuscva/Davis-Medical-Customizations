@@ -1189,7 +1189,7 @@ report 52606 "DME Check (Check/Stub/Stub)"
                                 else begin
                                     RemitAddress.Get(GenJnlLine."Remit-to Code", GenJnlLine."Account No.");
                                     //FormatAddr.VendorRemitToAddress(RemitAddress, CheckToAddr); //adsk
-                                    FormatAddr.VendorRemitToAddress(CheckToAddr, RemitAddress); //adsk
+                                    FormatAddr.VendorRemitToAddress(RemitAddress, CheckToAddr); //adsk
                                 end;
                                 if BankAcc2."Currency Code" <> "Currency Code" then
                                     Error(Text005Err);
